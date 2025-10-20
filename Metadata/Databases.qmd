@@ -1,0 +1,32 @@
+---
+title: "Firm-level Database: Variable Overview"
+author: "Roberto Jara"
+format: html
+---
+
+# Survey of R&D Expenditure and Personnel
+
+This dataset provides detailed information at the **firm level** regarding research and development (R&D) activities. Firms are further classified according to **size** and **economic activity**, allowing for disaggregated analyses across different sectors and firm scales.
+
+## Structure and Coverage
+
+A notable feature of this dataset is its **panel dimension**, which tracks firms from 2009 to 2023. This longitudinal structure facilitates the study of R&D evolution over time, as well as potential links with firm performance and internationalization trends.
+
+Since 2021, the survey has incorporated a **probabilistic component in firm selection**. Previously, the methodology focused on firms already known to invest in R&D, which may have led to an underestimation of total R&D investment. The probabilistic design aims to correct this bias by including a broader representation of firms.
+
+Consequently, for panel analyses, the **constant component of firms included in the R&D survey from 2021 to 2023** can be observed using the prior methodology, while the probabilistic component provides more representative cross-sectional coverage.
+
+The dataset includes a wide range of variables related to R&D, including personnel, expenditures, and other innovation indicators. In particular, the variable **B2001** reports firms’ export values in thousands of pesos, providing a measure of international engagement at the firm level.
+
+## Limitations
+
+While the dataset offers extensive information on R&D activities, it presents certain limitations:
+
+-   **Lack of product-level export information:** There is no breakdown of the specific products that are exported by each firm.\
+-   **No export destination data:** The countries or regions to which the exports are sent are not recorded.\
+-   **Panel constraints:** The longitudinal analysis is most reliable for the constant component of firms observed across years; the probabilistic component provides broader but less continuous coverage.
+
+## Notes
+
+-   The combination of firm-level panel data and rich R&D variables makes this dataset a valuable resource for studying innovation dynamics across sectors and over time.\
+-   Future work could involve linking this dataset with trade registries or customs data to enrich the information on exported products and destinations.
