@@ -39,12 +39,20 @@ The **National Customs Service (Servicio Nacional de Aduanas)** provides a compl
 
 Unlike the R&D survey, the customs dataset is **not firm-level**, but rather **transaction-level**. Each observation corresponds to an export operation identified by variables such as:
 
+<<<<<<< HEAD
 -   **FECHAACEPT:** acceptance date of the export declaration.\
 -   **CODIGORUTEXPORTADORPPAL:** identifier of the main exporter.\
 -   **ADUANA:** customs office responsible for processing the operation.\
 -   **PAÍS DESTINO:** country to which the product is exported.\
 -   **CÓDIGO SA (Sistema Armonizado):** product classification according to the international Harmonized System.\
 -   **VALOR FOB:** export value (in USD).
+=======
+- **FECHAACEPT:** acceptance date of the export declaration.    
+- **ADUANA:** customs office responsible for processing the operation.  
+- **PAISDESTINO:** country to which the product is exported.  
+- **CODIGOARANCEL:** product classification according to the international Harmonized System.  
+- **FOBUS:** export item value (in USD).
+>>>>>>> 40861c4c942b4cebd3731eed6959c160ea64f351
 
 This dataset provides **broad coverage across sectors and destinations**, offering a comprehensive picture of Chile’s export activity over time.
 
