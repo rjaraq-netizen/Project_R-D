@@ -24,7 +24,6 @@ While the dataset offers extensive information on R&D activities, it presents ce
 
 -   **Lack of product-level export information:** There is no breakdown of the specific products that are exported by each firm.\
 -   **No export destination data:** The countries or regions to which the exports are sent are not recorded.\
--   **Panel constraints:** The longitudinal analysis is most reliable for the constant component of firms observed across years; the probabilistic component provides broader but less continuous coverage.
 
 ## Notes
 
@@ -34,22 +33,30 @@ While the dataset offers extensive information on R&D activities, it presents ce
 
 # National Customs Service: Export Data
 
-The **National Customs Service (Servicio Nacional de Aduanas)** provides a complementary dataset that records **export operations at the product level**, classified according to the **Harmonized System (HS)** of goods. This database contains detailed information on the **type of exported products**, **export destinations**, and **trade flows** aggregated by customs offices and operations.
+The **National Customs Service (Servicio Nacional de Aduanas)** provides a complementary dataset that records **export operations by firms at the product level**, classified according to the **Harmonized System (HS)** of goods. This database contains detailed information on the **type of exported products**, **export destinations**, and **trade flows** aggregated by customs offices and operations.
 
 ## Structure and Coverage
 
-Unlike the R&D survey, the customs dataset is **not firm-level**, but rather **transaction-level**. Each observation corresponds to an export operation identified by variables such as:
+The **Customs dataset** is structured at the **firm level**, where each record corresponds to an exporting firm identified by its **export operations** over time. However, the available information focuses almost exclusively on **transactional data**, with limited details about firm characteristics beyond their export activity.
 
-- **FECHAACEPT:** acceptance date of the export declaration.    
-- **PAISDESTINO:** country to which the product is exported.  
-- **CODIGOARANCEL:** product classification according to the international Harmonized System.  
-- **FOBUS:** export item value (in USD).
+Each observation includes variables such as:
+
+- **FECHAACEPT:** acceptance date of the export declaration.  
+- **PAISDESTINO:** destination country of the exported product.  
+- **CODIGOARANCEL:** product classification according to the international Harmonized System (HS).  
+- **FOBUS:** export item value (in USD).  
+
+Although firms can be identified within this dataset, **the available indicators are only valid internally**, meaning that they cannot be directly merged with external firm-level sources such as the R&D survey. Moreover, **firm-specific information is scarce**, restricting the analysis mainly to export behavior and patterns rather than broader firm characteristics.
 
 This dataset provides **broad coverage across sectors and destinations**, offering a comprehensive picture of Chile’s export activity over time.
 
 ## Potential Integration with R&D Data
 
-Although the customs data do not include explicit firm-level identifiers compatible with the R&D survey, an **indirect linkage** can be established through **industry codes**. Specifically, by applying a **correspondence between the Harmonized System (HS) and the ISIC/CIIU Rev.4**, it is possible to map products to their corresponding economic activities.
+Although the customs data do not include explicit firm-level identifiers compatible with the R&D survey, an **indirect linkage** can be established through **industry codes**. Specifically, by applying a **correspondence between the Harmonized System (HS)** —which classifies products— **and the ISIC/CIIU Rev.4** —which classifies economic activities—, it is possible to map exported products to their corresponding industries.
+
+It is important to note that **this correspondence relies on a strong assumption**: that the exported products are representative of the firm’s **main economic activity**. In practice, a firm may belong to a particular industry (for example, food manufacturing) while also exporting products from different sectors (such as packaging materials or processed inputs).  
+
+By applying this mapping, we therefore **associate each export with the primary industry of the firm**, under the assumption that export activity reflects its main line of production. This methodological choice has **relevant implications**, as it affects how we interpret sectoral export intensity and innovation linkages — particularly in cases where firms diversify their product portfolio beyond their principal activity.
 
 This mapping enables analyses such as:
 
@@ -76,41 +83,10 @@ In this sense, the two datasets are **highly complementary**:
 Given that the customs data are disaggregated by **product and destination**, whereas the R&D survey operates at the **firm level**, the integration requires shifting the analytical focus toward the **sectoral level**.  
 This approach involves constructing **aggregated indicators of innovation and productivity** by sector and year, derived from the microdata of the R&D survey.
 
-### Construction of Sectoral Indicators
-
-From the R&D microdata, it is possible to compute, for each sector \( s \) and year \( t \):
-
--   **Average R&D intensity:**  
-    \[
-    \text{R&D Intensity}_{s,t} = \frac{\text{Total R&D Expenditure}_{s,t}}{\text{Total Sales}_{s,t}}
-    \]
-
--   **Average productivity indicator:** e.g., value added per employee or total factor productivity proxies aggregated at the sector level.
-
--   **R&D effort distribution:** proportion of firms performing R&D within each sector.
-
-These indicators summarize the **innovation behavior of firms** within a sector, providing a bridge between firm-level and product-level information.
-
-### Linking with Export Data
-
-By linking each export product (HS code) to its corresponding **CIIU4 industry**, the customs data can be aggregated to the same sectoral level as the constructed R&D indicators.  
 This alignment allows for the creation of a **sector–year panel** combining:
 
 -   **Export outcomes:** total export value, product diversification, destination markets.  
 -   **Innovation outcomes:** average R&D intensity, share of R&D-performing firms, productivity metrics.
 
 Such an integrated database enables the analysis of how **sectoral R&D investment relates to export performance**, product composition, and destination patterns.
-
-### Analytical Potential
-
-This sector-level integration opens new research possibilities, including:
-
--   Evaluating the **link between innovation intensity and export competitiveness** across industries.  
--   Identifying **technology-intensive sectors** that drive diversification in export baskets.  
--   Studying the **temporal dynamics of R&D and trade specialization**, capturing how innovation efforts precede or respond to changes in international demand.
-
-## Notes
-
-The inclusion of customs data expands the analytical scope of firm-level research by connecting **innovation behavior** with **export specialization patterns**.  
-Through the construction of **sectoral R&D and productivity indicators**, it becomes possible to bridge firm-level innovation measures with product-level trade outcomes, creating a unified view of **Chile’s innovation–export nexus**.
 
