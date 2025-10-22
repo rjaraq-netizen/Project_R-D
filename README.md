@@ -27,15 +27,6 @@ This repository aims to:
 - Produce a harmonized, privacy-aware firm-level database containing R&D metrics and export records.  
 - Provide exploratory analyses demonstrating data coverage, potential biases, and matching rates.  
 - Share code, metadata, and methodological notes to facilitate reproducibility and further research.
-
----
-
-## Scope and Assumptions
-- The repository focuses on **firm-level linkage** (not plant- or establishment-level, unless data permits).  
-- Export flows in source datasets may include all exported products; they are **not pre-filtered** for R&D-origin goods.  
-- Linking relies on shared identifiers (tax IDs, business registry codes) or **probabilistic matching** when direct identifiers are absent.  
-- The project emphasizes **transparency**: all transformations, assumptions, and matching heuristics are documented.
-
 ---
 
 ## Data Sources  
@@ -45,14 +36,6 @@ This repository aims to:
 
 - **Ministry of Science, Technology, Knowledge and Innovation** – [Survey on Research and Development (R&D) Expenditure and Personnel](https://observa.minciencia.gob.cl/encuesta/encuesta-sobre-gasto-y-personal-en-investigacion-y-desarrollo-id)
 
----
-
-## Deliverables
-- `data_catalog/` — metadata for each data source.  
-- `scripts/` — ETL and matching code (Python/R).  
-- `notebooks/` — exploratory analyses and diagnostics.  
-- `output/` — anonymized sample harmonized datasets and summary tables.  
-- Documentation on matching procedures, variable harmonization, and limitations.
 
 ---
 
