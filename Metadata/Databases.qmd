@@ -30,3 +30,49 @@ While the dataset offers extensive information on R&D activities, it presents ce
 
 -   The combination of firm-level panel data and rich R&D variables makes this dataset a valuable resource for studying innovation dynamics across sectors and over time.\
 -   Future work could involve linking this dataset with trade registries or customs data to enrich the information on exported products and destinations.
+
+
+# National Customs Service: Export Data
+
+The **National Customs Service (Servicio Nacional de Aduanas)** provides a complementary dataset that records **export operations at the product level**, classified according to the **Harmonized System (HS)** of goods. This database contains detailed information on the **type of exported products**, **export destinations**, and **trade flows** aggregated by customs offices and operations.
+
+## Structure and Coverage
+
+Unlike the R&D survey, the customs dataset is **not firm-level**, but rather **transaction-level**. Each observation corresponds to an export operation identified by variables such as:
+
+- **FECHAACEPT:** acceptance date of the export declaration.  
+- **CODIGORUTEXPORTADORPPAL:** identifier of the main exporter.  
+- **ADUANA:** customs office responsible for processing the operation.  
+- **PAÍS DESTINO:** country to which the product is exported.  
+- **CÓDIGO SA (Sistema Armonizado):** product classification according to the international Harmonized System.  
+- **VALOR FOB:** export value (in USD).
+
+This dataset provides **broad coverage across sectors and destinations**, offering a comprehensive picture of Chile’s export activity over time.
+
+## Potential Integration with R&D Data
+
+Although the customs data do not include explicit firm-level identifiers compatible with the R&D survey, an **indirect linkage** can be established through **industry codes**. Specifically, by applying a **correspondence between the Harmonized System (HS) and the ISIC/CIIU Rev.4**, it is possible to map products to their corresponding economic activities.
+
+This mapping enables analyses such as:
+
+-   Estimating **export intensity by industry** and comparing it with firms’ R&D investment patterns.  
+-   Studying **sectoral specialization in innovation and exports**, identifying industries with high R&D activity and high export participation.  
+-   Exploring **heterogeneity across destinations**, such as whether more technologically intensive sectors export disproportionately to developed economies.
+
+## Complementarity with the R&D Survey
+
+The integration of the **Customs dataset** and the **R&D survey** allows for a richer understanding of the relationship between **innovation and internationalization**. While the R&D survey captures firm-level efforts and resources devoted to innovation, the customs data provide an external validation of market outcomes — namely, **export performance** and **product specialization**.
+
+In this sense, the two datasets are **highly complementary**:
+
+| Aspect | R&D Survey | Customs Data |
+|:--|:--|:--|
+| **Unit of observation** | Firm | Export transaction |
+| **Temporal coverage** | 2009–2023 | Continuous (annual) |
+| **Focus** | R&D personnel, expenditure, innovation | Products, destinations, trade value |
+| **Classification system** | ISIC Rev.4 (CIIU4.CL 2012) | Harmonized System (HS) |
+| **Linkage potential** | Via HS–CIIU4 correspondence | Via HS–CIIU4 correspondence |
+
+## Notes
+
+The inclusion of customs data expands the analytical scope of firm-level research by connecting **innovation behavior** with **export specialization patterns**. Future steps may involve constructing an **industry-level panel** combining both data sources, leveraging the **HS–CIIU4 mapping** to analyze R&D–trade interactions across time and sectors.
