@@ -38,13 +38,12 @@ This repository aims to:
 
 ---
 
-## Methodology (High Level)
-1. **Cataloging:** Collect metadata for each source (coverage years, variables, identifier types, access restrictions).  
-2. **Preprocessing:** Standardize identifiers, names, and key variables; handle missing values and units.  
-3. **Harmonization:** Map product codes (HS/SITC) and R&D variable definitions across sources.  
-4. **Linkage:** Apply deterministic and probabilistic matching strategies; evaluate match quality.  
-5. **Validation & Analysis:** Produce descriptive stats, match-rate diagnostics, and exploratory regressions.  
-6. **Packaging:** Export harmonized datasets with metadata and reproducible notebooks.
+## Data Sources  
+
+- **National Customs Service of Chile (Servicio Nacional de Aduanas)** – [Export Records 2025](https://datos.gob.cl/dataset/registro-de-exportaciones-2025)  
+  Official portal: [https://www.aduana.cl](https://www.aduana.cl/aduana/site/edic/base/port/inicio.html)  
+
+- **Ministry of Science, Technology, Knowledge and Innovation** – [Survey on Research and Development (R&D) Expenditure and Personnel](https://observa.minciencia.gob.cl/encuesta/encuesta-sobre-gasto-y-personal-en-investigacion-y-desarrollo-id)
 
 ---
 
