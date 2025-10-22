@@ -99,6 +99,88 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+<section id="national-customs-service-export-data" class="level1">
+<h1>National Customs Service: Export Data</h1>
+<p>The <strong>National Customs Service (Servicio Nacional de Aduanas)</strong> provides a complementary dataset that records <strong>export operations at the product level</strong>, classified according to the <strong>Harmonized System (HS)</strong> of goods. This database contains detailed information on the <strong>type of exported products</strong>, <strong>export destinations</strong>, and <strong>trade flows</strong> aggregated by customs offices and operations.</p>
+<section id="structure-and-coverage-1" class="level2">
+<h2 class="anchored" data-anchor-id="structure-and-coverage-1">Structure and Coverage</h2>
+<p>Unlike the R&amp;D survey, the customs dataset is <strong>not firm-level</strong>, but rather <strong>transaction-level</strong>. Each observation corresponds to an export operation identified by variables such as:</p>
+<ul>
+<li><strong>FECHAACEPT:</strong> acceptance date of the export declaration.<br>
+</li>
+<li><strong>ADUANA:</strong> customs office responsible for processing the operation.<br>
+</li>
+<li><strong>PAISDESTINO:</strong> country to which the product is exported.<br>
+</li>
+<li><strong>CODIGOARANCEL:</strong> product classification according to the international Harmonized System.<br>
+</li>
+<li><strong>FOBUS:</strong> export item value (in USD).</li>
+</ul>
+<p>This dataset provides <strong>broad coverage across sectors and destinations</strong>, offering a comprehensive picture of Chile’s export activity over time.</p>
+</section>
+<section id="potential-integration-with-rd-data" class="level2">
+<h2 class="anchored" data-anchor-id="potential-integration-with-rd-data">Potential Integration with R&amp;D Data</h2>
+<p>Although the customs data do not include explicit firm-level identifiers compatible with the R&amp;D survey, an <strong>indirect linkage</strong> can be established through <strong>industry codes</strong>. Specifically, by applying a <strong>correspondence between the Harmonized System (HS) and the ISIC/CIIU Rev.4</strong>, it is possible to map products to their corresponding economic activities.</p>
+<p>This mapping enables analyses such as:</p>
+<ul>
+<li>Estimating <strong>export intensity by industry</strong> and comparing it with firms’ R&amp;D investment patterns.<br>
+</li>
+<li>Studying <strong>sectoral specialization in innovation and exports</strong>, identifying industries with high R&amp;D activity and high export participation.<br>
+</li>
+<li>Exploring <strong>heterogeneity across destinations</strong>, such as whether more technologically intensive sectors export disproportionately to developed economies.</li>
+</ul>
+</section>
+<section id="complementarity-with-the-rd-survey" class="level2">
+<h2 class="anchored" data-anchor-id="complementarity-with-the-rd-survey">Complementarity with the R&amp;D Survey</h2>
+<p>The integration of the <strong>Customs dataset</strong> and the <strong>R&amp;D survey</strong> allows for a richer understanding of the relationship between <strong>innovation and internationalization</strong>. While the R&amp;D survey captures firm-level efforts and resources devoted to innovation, the customs data provide an external validation of market outcomes — namely, <strong>export performance</strong> and <strong>product specialization</strong>.</p>
+<p>In this sense, the two datasets are <strong>highly complementary</strong>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">R&amp;D Survey</th>
+<th style="text-align: left;">Customs Data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Unit of observation</strong></td>
+<td style="text-align: left;">Firm</td>
+<td style="text-align: left;">Export transaction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Temporal coverage</strong></td>
+<td style="text-align: left;">2009–2023</td>
+<td style="text-align: left;">Continuous (annual)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Focus</strong></td>
+<td style="text-align: left;">R&amp;D personnel, expenditure, innovation</td>
+<td style="text-align: left;">Products, destinations, trade value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Classification system</strong></td>
+<td style="text-align: left;">ISIC Rev.4 (CIIU4.CL 2012)</td>
+<td style="text-align: left;">Harmonized System (HS)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Linkage potential</strong></td>
+<td style="text-align: left;">Via HS–CIIU4 correspondence</td>
+<td style="text-align: left;">Via HS–CIIU4 correspondence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notes-1" class="level2">
+<h2 class="anchored" data-anchor-id="notes-1">Notes</h2>
+<p>The inclusion of customs data expands the analytical scope of firm-level research by connecting <strong>innovation behavior</strong> with <strong>export specialization patterns</strong>. Future steps may involve constructing an <strong>industry-level panel</strong> combining both data sources, leveraging the <strong>HS–CIIU4 mapping</strong> to analyze R&amp;D–trade interactions across time and sectors.</p>
+</section>
+</section>
 
 </main>
 <!-- /main column -->
