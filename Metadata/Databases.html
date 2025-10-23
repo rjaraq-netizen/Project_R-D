@@ -75,8 +75,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="structure-and-coverage" class="level2">
 <h2 class="anchored" data-anchor-id="structure-and-coverage">Structure and Coverage</h2>
 <p>A notable feature of this dataset is its <strong>panel dimension</strong>, which tracks firms from 2009 to 2023. This longitudinal structure facilitates the study of R&amp;D evolution over time, as well as potential links with firm performance and internationalization trends.</p>
-<p>Since 2021, the survey has incorporated a <strong>probabilistic component in firm selection</strong>. Previously, the methodology focused on firms already known to invest in R&amp;D, which may have led to an underestimation of total R&amp;D investment. The probabilistic design aims to correct this bias by including a broader representation of firms.</p>
-<p>Consequently, for panel analyses, the <strong>constant component of firms included in the R&amp;D survey from 2021 to 2023</strong> can be observed using the prior methodology, while the probabilistic component provides more representative cross-sectional coverage.</p>
 <p>The dataset includes a wide range of variables related to R&amp;D, including personnel, expenditures, and other innovation indicators. In particular, the variable <strong>B2001</strong> reports firms’ export values in thousands of pesos, providing a measure of international engagement at the firm level.</p>
 </section>
 <section id="limitations" class="level2">
@@ -87,7 +85,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><strong>No export destination data:</strong> The countries or regions to which the exports are sent are not recorded.<br>
 </li>
-<li><strong>Panel constraints:</strong> The longitudinal analysis is most reliable for the constant component of firms observed across years; the probabilistic component provides broader but less continuous coverage.</li>
 </ul>
 </section>
 <section id="notes" class="level2">
@@ -95,32 +92,34 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The combination of firm-level panel data and rich R&amp;D variables makes this dataset a valuable resource for studying innovation dynamics across sectors and over time.<br>
 </li>
-<li>Future work could involve linking this dataset with trade registries or customs data to enrich the information on exported products and destinations.</li>
+<li>Linking this dataset with trade registries or customs data remains a challenge, as it would allow richer information on exported products and destinations.</li>
 </ul>
 </section>
 </section>
 <section id="national-customs-service-export-data" class="level1">
 <h1>National Customs Service: Export Data</h1>
-<p>The <strong>National Customs Service (Servicio Nacional de Aduanas)</strong> provides a complementary dataset that records <strong>export operations at the product level</strong>, classified according to the <strong>Harmonized System (HS)</strong> of goods. This database contains detailed information on the <strong>type of exported products</strong>, <strong>export destinations</strong>, and <strong>trade flows</strong> aggregated by customs offices and operations.</p>
+<p>The <strong>National Customs Service (Servicio Nacional de Aduanas)</strong> provides a complementary dataset that records <strong>export operations by firms at the product level</strong>, classified according to the <strong>Harmonized System (HS)</strong> of goods. This database contains detailed information on the <strong>type of exported products</strong>, <strong>export destinations</strong>, and <strong>trade flows</strong> aggregated by customs offices and operations.</p>
 <section id="structure-and-coverage-1" class="level2">
 <h2 class="anchored" data-anchor-id="structure-and-coverage-1">Structure and Coverage</h2>
-<p>Unlike the R&amp;D survey, the customs dataset is <strong>not firm-level</strong>, but rather <strong>transaction-level</strong>. Each observation corresponds to an export operation identified by variables such as:</p>
+<p>The <strong>Customs dataset</strong> is structured at the <strong>firm level</strong>, where each record corresponds to an exporting firm identified by its <strong>export operations</strong> over time. However, the available information focuses almost exclusively on <strong>transactional data</strong>, with limited details about firm characteristics beyond their export activity.</p>
+<p>Each observation includes variables such as:</p>
 <ul>
 <li><strong>FECHAACEPT:</strong> acceptance date of the export declaration.<br>
 </li>
-<li><strong>ADUANA:</strong> customs office responsible for processing the operation.<br>
+<li><strong>PAISDESTINO:</strong> destination country of the exported product.<br>
 </li>
-<li><strong>PAISDESTINO:</strong> country to which the product is exported.<br>
-</li>
-<li><strong>CODIGOARANCEL:</strong> product classification according to the international Harmonized System.<br>
+<li><strong>CODIGOARANCEL:</strong> product classification according to the international Harmonized System (HS).<br>
 </li>
 <li><strong>FOBUS:</strong> export item value (in USD).</li>
 </ul>
+<p>Although firms can be identified within this dataset, <strong>the available indicators are only valid internally</strong>, meaning that they cannot be directly merged with external firm-level sources such as the R&amp;D survey. Moreover, <strong>firm-specific information is scarce</strong>, restricting the analysis mainly to export behavior and patterns rather than broader firm characteristics.</p>
 <p>This dataset provides <strong>broad coverage across sectors and destinations</strong>, offering a comprehensive picture of Chile’s export activity over time.</p>
 </section>
 <section id="potential-integration-with-rd-data" class="level2">
 <h2 class="anchored" data-anchor-id="potential-integration-with-rd-data">Potential Integration with R&amp;D Data</h2>
-<p>Although the customs data do not include explicit firm-level identifiers compatible with the R&amp;D survey, an <strong>indirect linkage</strong> can be established through <strong>industry codes</strong>. Specifically, by applying a <strong>correspondence between the Harmonized System (HS) and the ISIC/CIIU Rev.4</strong>, it is possible to map products to their corresponding economic activities.</p>
+<p>Although the customs data do not include explicit firm-level identifiers compatible with the R&amp;D survey, an <strong>indirect linkage</strong> can be established through <strong>industry codes</strong>. Specifically, by applying a <strong>correspondence between the Harmonized System (HS)</strong> —which classifies products— <strong>and the ISIC/CIIU Rev.4</strong> —which classifies economic activities—, it is possible to map exported products to their corresponding industries.</p>
+<p>It is important to note that <strong>this correspondence relies on a strong assumption</strong>: that the exported products are representative of the firm’s <strong>main economic activity</strong>. In practice, a firm may belong to a particular industry (for example, food manufacturing) while also exporting products from different sectors (such as packaging materials or processed inputs).</p>
+<p>By applying this mapping, we therefore <strong>associate each export with the primary industry of the firm</strong>, under the assumption that export activity reflects its main line of production. This methodological choice has <strong>relevant implications</strong>, as it affects how we interpret sectoral export intensity and innovation linkages — particularly in cases where firms diversify their product portfolio beyond their principal activity.</p>
 <p>This mapping enables analyses such as:</p>
 <ul>
 <li>Estimating <strong>export intensity by industry</strong> and comparing it with firms’ R&amp;D investment patterns.<br>
@@ -133,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="complementarity-with-the-rd-survey" class="level2">
 <h2 class="anchored" data-anchor-id="complementarity-with-the-rd-survey">Complementarity with the R&amp;D Survey</h2>
 <p>The integration of the <strong>Customs dataset</strong> and the <strong>R&amp;D survey</strong> allows for a richer understanding of the relationship between <strong>innovation and internationalization</strong>. While the R&amp;D survey captures firm-level efforts and resources devoted to innovation, the customs data provide an external validation of market outcomes — namely, <strong>export performance</strong> and <strong>product specialization</strong>.</p>
-<p>In this sense, the two datasets are <strong>highly complementary</strong>:</p>
+<p>In this sense, the two datasets are <strong>complementary</strong>:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -176,9 +175,17 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="notes-1" class="level2">
-<h2 class="anchored" data-anchor-id="notes-1">Notes</h2>
-<p>The inclusion of customs data expands the analytical scope of firm-level research by connecting <strong>innovation behavior</strong> with <strong>export specialization patterns</strong>. Future steps may involve constructing an <strong>industry-level panel</strong> combining both data sources, leveraging the <strong>HS–CIIU4 mapping</strong> to analyze R&amp;D–trade interactions across time and sectors.</p>
+<section id="aggregation-and-sector-level-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="aggregation-and-sector-level-indicators">Aggregation and Sector-Level Indicators</h2>
+<p>Given that the customs data are disaggregated by <strong>product and destination</strong>, whereas the R&amp;D survey operates at the <strong>firm level</strong>, the integration requires shifting the analytical focus toward the <strong>sectoral level</strong>.<br>
+This approach involves constructing <strong>aggregated indicators of innovation and productivity</strong> by sector and year, derived from the microdata of the R&amp;D survey.</p>
+<p>This alignment allows for the creation of a <strong>sector–year panel</strong> combining:</p>
+<ul>
+<li><strong>Export outcomes:</strong> total export value, product diversification, destination markets.<br>
+</li>
+<li><strong>Innovation outcomes:</strong> average R&amp;D intensity, share of R&amp;D-performing firms, productivity metrics.</li>
+</ul>
+<p>Such an integrated database enables the analysis of how <strong>sectoral R&amp;D investment relates to export performance</strong>, product composition, and destination patterns.</p>
 </section>
 </section>
 

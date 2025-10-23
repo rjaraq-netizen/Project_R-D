@@ -1,7 +1,7 @@
 ---
 title: "Firm-level Database: Variable Overview"
 author: "Roberto Jara"
-format: html
+format: pdf
 ---
 
 # Survey of R&D Expenditure and Personnel
@@ -26,7 +26,6 @@ While the dataset offers extensive information on R&D activities, it presents ce
 -   The combination of firm-level panel data and rich R&D variables makes this dataset a valuable resource for studying innovation dynamics across sectors and over time.\
 -   Linking this dataset with trade registries or customs data remains a challenge, as it would allow richer information on exported products and destinations.
 
-
 # National Customs Service: Export Data
 
 The **National Customs Service (Servicio Nacional de Aduanas)** provides a complementary dataset that records **export operations by firms at the product level**, classified according to the **Harmonized System (HS)** of goods. This database contains detailed information on the **type of exported products**, **export destinations**, and **trade flows** aggregated by customs offices and operations.
@@ -37,10 +36,10 @@ The **Customs dataset** is structured at the **firm level**, where each record c
 
 Each observation includes variables such as:
 
-- **FECHAACEPT:** acceptance date of the export declaration.  
-- **PAISDESTINO:** destination country of the exported product.  
-- **CODIGOARANCEL:** product classification according to the international Harmonized System (HS).  
-- **FOBUS:** export item value (in USD).  
+-   **FECHAACEPT:** acceptance date of the export declaration.\
+-   **PAISDESTINO:** destination country of the exported product.\
+-   **CODIGOARANCEL:** product classification according to the international Harmonized System (HS).\
+-   **FOBUS:** export item value (in USD).
 
 Although firms can be identified within this dataset, **the available indicators are only valid internally**, meaning that they cannot be directly merged with external firm-level sources such as the R&D survey. Moreover, **firm-specific information is scarce**, restricting the analysis mainly to export behavior and patterns rather than broader firm characteristics.
 
@@ -50,14 +49,14 @@ This dataset provides **broad coverage across sectors and destinations**, offeri
 
 Although the customs data do not include explicit firm-level identifiers compatible with the R&D survey, an **indirect linkage** can be established through **industry codes**. Specifically, by applying a **correspondence between the Harmonized System (HS)** —which classifies products— **and the ISIC/CIIU Rev.4** —which classifies economic activities—, it is possible to map exported products to their corresponding industries.
 
-It is important to note that **this correspondence relies on a strong assumption**: that the exported products are representative of the firm’s **main economic activity**. In practice, a firm may belong to a particular industry (for example, food manufacturing) while also exporting products from different sectors (such as packaging materials or processed inputs).  
+It is important to note that **this correspondence relies on a strong assumption**: that the exported products are representative of the firm’s **main economic activity**. In practice, a firm may belong to a particular industry (for example, food manufacturing) while also exporting products from different sectors (such as packaging materials or processed inputs).
 
 By applying this mapping, we therefore **associate each export with the primary industry of the firm**, under the assumption that export activity reflects its main line of production. This methodological choice has **relevant implications**, as it affects how we interpret sectoral export intensity and innovation linkages — particularly in cases where firms diversify their product portfolio beyond their principal activity.
 
 This mapping enables analyses such as:
 
--   Estimating **export intensity by industry** and comparing it with firms’ R&D investment patterns.  
--   Studying **sectoral specialization in innovation and exports**, identifying industries with high R&D activity and high export participation.  
+-   Estimating **export intensity by industry** and comparing it with firms’ R&D investment patterns.\
+-   Studying **sectoral specialization in innovation and exports**, identifying industries with high R&D activity and high export participation.\
 -   Exploring **heterogeneity across destinations**, such as whether more technologically intensive sectors export disproportionately to developed economies.
 
 ## Complementarity with the R&D Survey
@@ -67,7 +66,7 @@ The integration of the **Customs dataset** and the **R&D survey** allows for a r
 In this sense, the two datasets are **complementary**:
 
 | Aspect | R&D Survey | Customs Data |
-|:--|:--|:--|
+|:-----------------------|:-----------------------|:-----------------------|
 | **Unit of observation** | Firm | Export transaction |
 | **Temporal coverage** | 2009–2023 | Continuous (annual) |
 | **Focus** | R&D personnel, expenditure, innovation | Products, destinations, trade value |
@@ -76,13 +75,12 @@ In this sense, the two datasets are **complementary**:
 
 ## Aggregation and Sector-Level Indicators
 
-Given that the customs data are disaggregated by **product and destination**, whereas the R&D survey operates at the **firm level**, the integration requires shifting the analytical focus toward the **sectoral level**.  
+Given that the customs data are disaggregated by **product and destination**, whereas the R&D survey operates at the **firm level**, the integration requires shifting the analytical focus toward the **sectoral level**.\
 This approach involves constructing **aggregated indicators of innovation and productivity** by sector and year, derived from the microdata of the R&D survey.
 
 This alignment allows for the creation of a **sector–year panel** combining:
 
--   **Export outcomes:** total export value, product diversification, destination markets.  
+-   **Export outcomes:** total export value, product diversification, destination markets.\
 -   **Innovation outcomes:** average R&D intensity, share of R&D-performing firms, productivity metrics.
 
 Such an integrated database enables the analysis of how **sectoral R&D investment relates to export performance**, product composition, and destination patterns.
-
