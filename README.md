@@ -1,11 +1,9 @@
 # Firm-level R&D and Export Database
 
 ## Project Overview
-This project develops the foundations and tooling to construct a **firm-level database** that brings together companies’ **research & development (R&D)** information and their **export activity** records.  
+This project develops the foundations and tools to build a firm/sector-level database that combines companies’ research and development (R&D), production, and export activity records.
 
-The resulting dataset will combine firm identifiers, R&D indicators (e.g., intramural and extramural expenditures, R&D personnel, patent counts), and export information (e.g., product classifications, export values, destination countries, HS or SITC codes).  
-
-Exports included in the source data are **not required to be explicitly R&D-derived**; instead, the objective is to host both innovation indicators and export flows at the firm level so researchers can study links between **innovation capacity** and **international engagement**.
+The resulting dataset will integrate sector identifiers with detailed R&D indicators (such as intramural and extramural expenditures, R&D personnel, and patent counts) and export-related information (including product classifications, export values, destination countries, and HS codes).
 
 ---
 
@@ -24,9 +22,7 @@ This repository aims to:
 ## Objectives
 - Identify and document candidate data sources for firm-level R&D and exports.  
 - Build reproducible pipelines for cleaning, standardizing, and linking datasets.  
-- Produce a harmonized, privacy-aware firm-level database containing R&D metrics and export records.  
 - Provide exploratory analyses demonstrating data coverage, potential biases, and matching rates.  
-- Share code, metadata, and methodological notes to facilitate reproducibility and further research.
 ---
 
 ## Data Sources  
@@ -36,7 +32,3 @@ This repository aims to:
 
 - **Ministry of Science, Technology, Knowledge and Innovation** – [Survey on Research and Development (R&D) Expenditure and Personnel](https://observa.minciencia.gob.cl/encuesta/encuesta-sobre-gasto-y-personal-en-investigacion-y-desarrollo-id)
 
-
----
-
-## Repository Structure
