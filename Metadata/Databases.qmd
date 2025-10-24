@@ -36,10 +36,10 @@ The **Customs dataset** is structured at the **firm level**, where each record c
 
 Each observation includes variables such as:
 
--   **FECHAACEPT:** acceptance date of the export declaration.\
--   **PAISDESTINO:** destination country of the exported product.\
--   **CODIGOARANCEL:** product classification according to the international Harmonized System (HS).\
--   **FOBUS:** export item value (in USD).
+-   `FECHAACEPT`: acceptance date of the export declaration.\
+-   `PAISDESTINO`: destination country of the exported product.\
+-   `CODIGOARANCEL`: product classification according to the international Harmonized System (HS).\
+-   `FOBUS`: export item value (in USD).
 
 Although firms can be identified within this dataset, **the available indicators are only valid internally**, meaning that they cannot be directly merged with external firm-level sources such as the R&D survey. Moreover, **firm-specific information is scarce**, restricting the analysis mainly to export behavior and patterns rather than broader firm characteristics.
 
@@ -48,6 +48,8 @@ This dataset provides **broad coverage across sectors and destinations**, offeri
 ## Potential Integration with R&D Data
 
 Although the customs data do not include explicit firm-level identifiers compatible with the R&D survey, an **indirect linkage** can be established through **industry codes**. Specifically, by applying a **correspondence between the Harmonized System (HS)** —which classifies products— **and the ISIC/CIIU Rev.4** —which classifies economic activities—, it is possible to map exported products to their corresponding industries.
+
+The correspondence table is available [here](https://www.ine.gob.cl/calidad-estadistica/clasificaciones) (see *“Tabla de correspondencia AA 2022 – CIIU4.CL 2012”*).
 
 It is important to note that **this correspondence relies on a strong assumption**: that the exported products are representative of the firm’s **main economic activity**. In practice, a firm may belong to a particular industry (for example, food manufacturing) while also exporting products from different sectors (such as packaging materials or processed inputs).
 
