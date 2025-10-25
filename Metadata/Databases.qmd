@@ -53,11 +53,27 @@ The correspondence table is available [here](https://www.ine.gob.cl/calidad-esta
 
 It is important to note that **this correspondence relies on a strong assumption**: that the exported products are representative of the firm’s **main economic activity**. In practice, a firm may belong to a particular industry (for example, food manufacturing) while also exporting products from different sectors (such as packaging materials or processed inputs).
 
+**Under this assumption, the resulting export data are concentrated in a few activity sections.** Most exports correspond to section **A: Agriculture, forestry, and fishing**, and to **C: Manufacturing**, and divisions:
+
+- **C20:** Manufacture of chemicals and chemical products  
+- **C21:** Manufacture of pharmaceutical products, medicinal chemicals, and botanical products for pharmaceutical use  
+
+Therefore, firms classified as **agricultural or manufacturing** in the innovation survey are the most prevalent exporters in the customs data, and the dataset is mainly focused on these types of firms.
+
 By applying this mapping, we therefore **associate each export with the primary industry of the firm**, under the assumption that export activity reflects its main line of production. 
+
+In addition, we introduce an **experimental firm size dimension** in the customs data to provide more transparency. Firms are classified based on their total export values according to the following **percentile thresholds**:
+
+- **Micro:** below the 5th percentile of total exports  
+- **Small:** between the 5th and 20th percentiles  
+- **Medium:** between the 20th and 60th percentiles  
+- **Large:** above the 60th percentile  
+
+These criteria are preliminary and purely exploratory, intended to provide an additional dimension for linking the customs data with the R&D survey.
 
 This mapping enables analyses such as:
 
--   Estimating **export intensity by industry** and comparing it with firms’ R&D investment patterns.\
+-   Estimating **export intensity by industry and size** and comparing it with firms’ R&D investment patterns.\
 -   Studying **sectoral specialization in innovation and exports**, identifying industries with high R&D activity and high export participation.\
 -   Exploring **heterogeneity across destinations**, such as whether more technologically intensive sectors export disproportionately to developed economies.
 
@@ -74,20 +90,24 @@ In this sense, the two datasets are **complementary**:
 | **Focus** | R&D personnel, expenditure, innovation | Products, destinations, trade value |
 | **Classification system** | ISIC Rev.4 (CIIU4.CL 2012) | Harmonized System (HS) |
 | **Linkage potential** | Via HS–CIIU4 correspondence | Via HS–CIIU4 correspondence |
+| **Linkage potential** | Via Size (number of workers) | Via Export size (based on arbitrarily created percentiles|
+
 
 ## Aggregation and Sector-Level Indicators
 
-Given that the customs data are disaggregated by **product and destination**, whereas the R&D survey operates at the **firm level**, the integration requires shifting the analytical focus toward the **sectoral level**.\
-This approach involves constructing **aggregated indicators of innovation and productivity** by sector and year, derived from the microdata of the R&D survey.
+Given that the customs data are disaggregated by **product and destination**, whereas the R&D survey operates at the **firm level**, the integration requires shifting the analytical focus toward the **sectoral/size level**.\
+This approach involves constructing **aggregated indicators of innovation and productivity** by sector/size and year, derived from the microdata of the R&D survey.
 
-This alignment allows for the creation of a **sector–year panel** combining:
+This alignment allows for the creation of a **sector/size–year panel** combining:
 
-- **Exported product:** `CODIGOARANCEL`  
-- **Export destination (j):** `PAISDESTINO`  
-- **Export flow:** `SUM(FOBUS)` of sector *k* at time *t*  
-- **Trade flow to destination j at time t > t₀**  
-- **Innovation and/or R&D expenditure:** Includes sector-level measures of R&D, which may draw on different metrics available from firm-level microdata.  
-- **Productivity variables:** Includes sector-level measures of productivity, which may draw on different metrics available from firm-level microdata.
+This alignment enables the construction of a **sector–size–year panel** combining the following elements:
 
+- **Exported product (`AA2022`)**: Classified according to Harmonized System (HS) codes.  
+- **Export destination (`PAISDESTINO`)**.  
+- **Export flow**: `SUM(TOTALVALORFOB)` for sector *k* at time *t* (other measures from the customs database can also be used).  
+- **Trade flow to destination j at time t > t₀**.  
+- **Innovation and/or R&D expenditure (`innov_total`)**: Total innovation by sector and size, computed as the sum of `D3100`, `D3107`, and `D3110` from firm-level microdata.  
+- **Productivity variables (`prod_ventas_trab`)**: Average productivity (sales per worker) by sector and size, calculated as the mean of `B2000 / C4313` from firm-level microdata.
+- **ISIC Rev.4 (CIIU4.CL 2012) economic activity (`A38`)**
 
 Such an integrated database enables the analysis of how **sectoral R&D investment relates to export performance**, product composition, and destination patterns.
