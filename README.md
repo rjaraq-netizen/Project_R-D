@@ -1,4 +1,4 @@
-# Firm-level R&D and Export Database
+# Sector R&D and Export Database
 
 ## Project Overview
 This project develops the foundations and tools to build a firm/sector-level database that combines companies’ research and development (R&D), production, and export activity records.
@@ -8,7 +8,7 @@ The resulting dataset will integrate sector identifiers with detailed R&D indica
 ---
 
 ## Motivation
-Understanding how firm-level innovation translates into international market presence is central to policies on competitiveness, industrial upgrading, and global value chain participation.  
+Understanding how sector level innovation translates into international market presence is central to policies on competitiveness, industrial upgrading, and global value chain participation.  
 
 However, available microdata is often fragmented across statistical offices, trade registries, patent offices, and administrative sources.  
 
@@ -20,7 +20,7 @@ This repository aims to:
 ---
 
 ## Objectives
-- Identify and document candidate data sources for firm-level R&D and exports.  
+- Identify and document candidate data sources for firm-level R&D and exports for Customs Service of Chile.  
 - Build reproducible pipelines for cleaning, standardizing, and linking datasets.  
 - Provide exploratory analyses demonstrating data coverage, potential biases, and matching rates.  
 ---
