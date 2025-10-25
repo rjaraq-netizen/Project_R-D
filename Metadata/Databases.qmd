@@ -4,6 +4,10 @@ author: "Roberto Jara"
 format: pdf
 ---
 
+# Introduction
+
+This document first describes the **firm-level microdata** on R&D activities and then shows how it is integrated with additional sources to obtain **export-related information**. This integration allows for a combined dataset linking **R&D efforts** with **international trade outcomes**.
+
 # Survey of R&D Expenditure and Personnel
 
 This dataset provides detailed information at the **firm level** regarding research and development (R&D) activities. Firms are further classified according to **size** and **economic activity**, allowing for disaggregated analyses across different sectors and firm scales.
