@@ -1,5 +1,5 @@
 ---
-title: "Sector-level Database: Variable Overview"
+title: "Sector-level Database: R&D and Exports Variable Overview"
 author: "Roberto Jara"
 format: pdf
 ---
