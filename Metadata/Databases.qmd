@@ -62,20 +62,15 @@ Therefore, firms classified as **agricultural or manufacturing** in the innovati
 
 By applying this mapping, we therefore **associate each export with the primary industry of the firm**, under the assumption that export activity reflects its main line of production. 
 
-In addition, we introduce an **experimental firm size dimension** in the customs data to provide more transparency. Firms are classified based on their total export values according to the following **percentile thresholds**:
+In addition, we introduce an **experimental firm size dimension** in the customs data. Firms are classified based on their total export values according to the following **percentile thresholds**:
 
 - **Micro:** below the 5th percentile of total exports  
 - **Small:** between the 5th and 20th percentiles  
 - **Medium:** between the 20th and 60th percentiles  
 - **Large:** above the 60th percentile  
 
-These criteria are preliminary and purely exploratory, intended to provide an additional dimension for linking the customs data with the R&D survey.
+These criteria are preliminary and purely exploratory, intended to provide an additional dimension for linking the customs data with the R&D survey. Note that the **firm size estimated from exports** differs from the **firm size in the microdata**, which is measured by the number of workers.
 
-This mapping enables analyses such as:
-
--   Estimating **export intensity by industry and size** and comparing it with firms’ R&D investment patterns.\
--   Studying **sectoral specialization in innovation and exports**, identifying industries with high R&D activity and high export participation.\
--   Exploring **heterogeneity across destinations**, such as whether more technologically intensive sectors export disproportionately to developed economies.
 
 ## Complementarity with the R&D Survey
 
@@ -90,7 +85,7 @@ In this sense, the two datasets are **complementary**:
 | **Focus** | R&D personnel, expenditure, innovation | Products, destinations, trade value |
 | **Classification system** | ISIC Rev.4 (CIIU4.CL 2012) | Harmonized System (HS) |
 | **Linkage potential** | Via HS–CIIU4 correspondence | Via HS–CIIU4 correspondence |
-| **Linkage potential** | Via Size (number of workers) | Via Export size (based on arbitrarily created percentiles|
+| **Linkage potential** | Via Size (number of workers) | Via Export size (based on arbitrarily created percentiles)|
 
 
 ## Aggregation and Sector-Level Indicators
@@ -98,9 +93,7 @@ In this sense, the two datasets are **complementary**:
 Given that the customs data are disaggregated by **product and destination**, whereas the R&D survey operates at the **firm level**, the integration requires shifting the analytical focus toward the **sectoral/size level**.\
 This approach involves constructing **aggregated indicators of innovation and productivity** by sector/size and year, derived from the microdata of the R&D survey.
 
-This alignment allows for the creation of a **sector/size–year panel** combining:
-
-This alignment enables the construction of a **sector–size–year panel** combining the following elements:
+This alignment enables the construction of a **sector/size–year panel** combining the following elements:
 
 - **Exported product (`AA2022`)**: Classified according to Harmonized System (HS) codes.  
 - **Export destination (`PAISDESTINO`)**.  
